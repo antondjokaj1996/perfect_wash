@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="sr-ME">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfect Wash — Vešeraj i hemijska perionica | Podgorica</title>
+
+<meta name="description" content="Perfect Wash, Dušana Milutinovića 1, Zabjelo — pranje veša, hemijsko čišćenje i čišćenje obuće u Podgorici. Pon–Sub 08–21h. Pozovi 067 515 199.">
+<meta name="keywords" content="vešeraj Podgorica, pranje veša Podgorica, hemijsko čišćenje Podgorica, laundry Podgorica, čišćenje obuće Podgorica, vešeraj Zabjelo">
+<meta name="author" content="Perfect Wash">
+<meta name="theme-color" content="#315B89">
+<link rel="canonical" href="https://perfectwash.me/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Perfect Wash Podgorica">
+<meta property="og:locale" content="sr_ME">
+<meta property="og:title" content="Perfect Wash — Vešeraj i hemijska perionica | Podgorica">
+<meta property="og:description" content="Donesi veš. Ostalo je na nama. Vešeraj, hemijsko čišćenje i čišćenje obuće na Zabjelu. Pon–Sub 08–21h. Pozovi 067 515 199.">
+<meta property="og:image" content="assets/logo-circle.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Perfect Wash — Vešeraj i hemijska perionica | Podgorica">
+<meta name="twitter:description" content="Donesi veš. Ostalo je na nama. Vešeraj i hemijska perionica na Zabjelu, Podgorica.">
+<meta name="twitter:image" content="assets/logo-circle.png">
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap">
+
+<style>
+/* ============================================================
+   Perfect Wash — design tokens
+   Brand blue sampled from logo: #315B89
+   ============================================================ */
+:root{
+  --brand:#315B89;
+  --brand-deep:#1E3C5C;
+  --brand-ink:#132A40;
+  --brand-soft:#4B7BB0;
+  --azure:#7FB2DC;
+  --azure-light:#B9D8F0;
+  --tint:#F1F6FB;
+  --tint-2:#E4EEF8;
+  --border:#DCE6F1;
+  --border-strong:#C6D7E8;
+  --ink:#17293B;
+  --ink-soft:#5A7085;
+  --ink-faint:#8899A8;
+  --white:#fff;
+  --offwhite:#FAFCFE;
+
+  --radius:1rem;
+  --radius-lg:1.5rem;
+  --radius-xl:2rem;
+  --radius-pill:999px;
+
+  --shadow-sm:0 1px 2px rgba(19,42,64,.05), 0 1px 3px rgba(19,42,64,.04);
+  --shadow:0 4px 12px rgba(19,42,64,.06), 0 1px 3px rgba(19,42,64,.04);
+  --shadow-lg:0 18px 44px rgba(19,42,64,.10), 0 4px 12px rgba(19,42,64,.05);
+  --shadow-brand:0 14px 34px rgba(49,91,137,.22);
+
+  --font:"Manrope","Helvetica Neue",Helvetica,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+
+  --gap:clamp(1rem,2.4vw,1.5rem);
+  --pad-x:clamp(1.15rem,4vw,2.5rem);
+  --sec-y:clamp(4rem,9vw,7.5rem);
+  --maxw:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;
+  font-family:var(--font);
+  font-weight:400;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.08;letter-spacing:-.022em;font-weight:800}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2.5px solid var(--brand);outline-offset:3px;border-radius:6px}
+
+/* layout helpers */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad-x)}
+.section{padding-block:var(--sec-y);position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brand-soft);margin-bottom:1.1rem;
+}
+.eyebrow::before{content:"";width:1.6rem;height:2px;background:var(--azure);border-radius:2px}
+.h-display{font-size:clamp(2.05rem,5.4vw,3.6rem)}
+.h-section{font-size:clamp(1.85rem,4.6vw,3.1rem)}
+.h-sub{font-size:clamp(1.05rem,1.6vw,1.2rem);font-weight:500;color:var(--ink-soft);line-height:1.62;letter-spacing:0}
+.accent{color:var(--brand-soft)}
+.lede{font-size:clamp(1rem,1.45vw,1.12rem);color:var(--ink-soft);line-height:1.72}
+.section-head{max-width:44rem}
+
+/* ---------------- buttons ---------------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  font-family:inherit;font-size:.95rem;font-weight:700;letter-spacing:-.005em;
+  padding:.92rem 1.5rem;border-radius:var(--radius-pill);border:1.5px solid transparent;
+  cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease,color .18s ease;
+  white-space:nowrap;
+}
+.btn svg{width:1.05em;height:1.05em;flex:none}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-brand)}
+.btn-primary:hover{background:var(--brand-deep);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--brand-deep);border-color:var(--border-strong)}
+.btn-ghost:hover{border-color:var(--brand-soft);background:var(--tint);transform:translateY(-2px)}
+.btn-onDark{background:#fff;color:var(--brand-deep)}
+.btn-onDark:hover{background:var(--azure-light);transform:translateY(-2px)}
+.btn-outlineDark{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.btn-outlineDark:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-lg{padding:1rem 1.6rem;font-size:.96rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+
+/* ---------------- header ---------------- */
+.hdr{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.86);
+  -webkit-backdrop-filter:blur(14px) saturate(180%);
+  backdrop-filter:blur(14px) saturate(180%);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease,box-shadow .25s ease;
+}
+.hdr.is-stuck{border-bottom-color:var(--border);box-shadow:0 4px 20px rgba(19,42,64,.05)}
+.hdr-in{display:flex;align-items:center;gap:1.25rem;min-height:4.6rem}
+.brand{display:flex;align-items:center;gap:.7rem;margin-right:auto}
+.brand-mark{
+  width:2.6rem;height:2.6rem;border-radius:50%;flex:none;
+  background:#fff;border:1px solid var(--border);
+  display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow-sm);
+}
+.brand-mark img{width:80%}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.brand-txt b{font-size:.94rem;font-weight:800;letter-spacing:.13em;color:var(--brand-deep)}
+.brand-txt span{font-size:.62rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-faint);margin-top:.24rem}
+
+.nav{display:flex;align-items:center;gap:.15rem}
+.nav a{
+  font-size:.88rem;font-weight:600;color:var(--ink-soft);
+  padding:.55rem .8rem;border-radius:var(--radius-pill);transition:color .18s,background .18s;
+}
+.nav a:hover{color:var(--brand-deep);background:var(--tint)}
+.hdr .btn{padding:.72rem 1.25rem;font-size:.88rem}
+@media (max-width:960px){.nav{display:none}}
+@media (max-width:520px){.hdr .btn span{display:none}.hdr .btn{padding:.72rem .95rem}}
+
+/* ---------------- hero ---------------- */
+.hero{position:relative;overflow:hidden;padding-block:clamp(3rem,7vw,6rem) clamp(2.5rem,6vw,4.5rem)}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(90rem 42rem at 78% -14%, var(--tint-2) 0%, rgba(228,238,248,0) 62%),
+    radial-gradient(60rem 34rem at 6% 8%, #F6FAFD 0%, rgba(246,250,253,0) 60%),
+    var(--white);
+}
+.hero::after{
+  content:"";position:absolute;z-index:-1;right:-8rem;top:-10rem;width:34rem;height:34rem;border-radius:50%;
+  background:radial-gradient(circle at 40% 35%, rgba(127,178,220,.30), rgba(127,178,220,0) 68%);
+  filter:blur(6px);pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.14fr .86fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:2.75rem}}
+
+.hero h1{margin:.35rem 0 1.25rem}
+.hero h1 em{font-style:normal;color:var(--brand-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.chip{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-size:.79rem;font-weight:700;color:var(--brand-deep);
+  background:var(--tint);border:1px solid var(--border);
+  padding:.42rem .85rem;border-radius:var(--radius-pill);
+}
+.chip i{width:.42rem;height:.42rem;border-radius:50%;background:var(--azure);flex:none}
+
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:0 2.2rem;margin-top:2.4rem;padding-top:1.6rem;
+  border-top:1px solid var(--border);
+}
+.hero-meta div{padding-block:.4rem}
+.hero-meta dt{font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.hero-meta dd{margin:.25rem 0 0;font-size:.95rem;font-weight:700;color:var(--brand-deep)}
+
+/* hero visual */
+.hero-art{position:relative;display:grid;place-items:center;padding:1rem}
+.hero-disc{
+  position:relative;width:min(100%,25rem);aspect-ratio:1;border-radius:50%;
+  background:linear-gradient(160deg,#fff 0%,var(--tint) 55%,var(--tint-2) 100%);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-lg);
+  display:grid;place-items:center;
+}
+.hero-disc::before{
+  content:"";position:absolute;inset:6%;border-radius:50%;border:1.5px dashed var(--border-strong);opacity:.7;
+}
+.hero-disc img{width:62%;position:relative;z-index:2;filter:drop-shadow(0 10px 24px rgba(49,91,137,.18))}
+.bubble{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%, rgba(255,255,255,.95), rgba(127,178,220,.42) 60%, rgba(75,123,176,.28));
+  border:1px solid rgba(255,255,255,.7);
+  box-shadow:0 6px 18px rgba(49,91,137,.14);
+}
+.b1{width:3.4rem;height:3.4rem;top:4%;left:6%}
+.b2{width:1.9rem;height:1.9rem;top:20%;right:1%}
+.b3{width:2.6rem;height:2.6rem;bottom:9%;left:0%}
+.b4{width:1.2rem;height:1.2rem;bottom:22%;right:7%}
+@media (prefers-reduced-motion:no-preference){
+  .bubble{animation:float 7s ease-in-out infinite}
+  .b2{animation-duration:9s;animation-delay:-2s}
+  .b3{animation-duration:8s;animation-delay:-4s}
+  .b4{animation-duration:6s;animation-delay:-1s}
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+
+.hero-badge{
+  position:absolute;bottom:7%;right:2%;
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:.7rem .95rem;display:flex;align-items:center;gap:.6rem;
+}
+.hero-badge b{font-size:1.05rem;color:var(--brand-deep);font-weight:800}
+.hero-badge small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* ---------------- flow strip ---------------- */
+.flow{
+  display:flex;align-items:stretch;flex-wrap:wrap;gap:.5rem;
+  margin-top:clamp(2.5rem,5vw,3.5rem);padding:1rem;
+  background:var(--offwhite);border:1px solid var(--border);border-radius:var(--radius-lg);
+}
+.flow-step{
+  flex:1 1 12rem;display:flex;align-items:center;gap:.8rem;
+  padding:.85rem 1rem;background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+}
+.flow-step svg{width:1.5rem;height:1.5rem;color:var(--brand-soft);flex:none}
+.flow-step b{display:block;font-size:.92rem;font-weight:700;color:var(--brand-deep)}
+.flow-step small{font-size:.76rem;color:var(--ink-faint);font-weight:600}
+.flow-arrow{display:grid;place-items:center;color:var(--azure);font-weight:800;flex:none;width:1.6rem}
+@media (max-width:760px){.flow-arrow{transform:rotate(90deg);width:100%;height:1.2rem}}
+
+/* ---------------- about ---------------- */
+.about{background:var(--offwhite);border-block:1px solid var(--border)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+.about-copy p+p{margin-top:1rem}
+.about-copy strong{color:var(--brand-deep);font-weight:700}
+.fact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap)}
+@media (max-width:420px){.fact-grid{grid-template-columns:1fr}}
+.fact{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:1.4rem 1.3rem;box-shadow:var(--shadow-sm);
+}
+.fact-ico{
+  width:2.5rem;height:2.5rem;border-radius:.75rem;display:grid;place-items:center;
+  background:var(--tint);color:var(--brand);margin-bottom:.95rem;
+}
+.fact-ico svg{width:1.25rem;height:1.25rem}
+.fact dt{font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.fact dd{margin:.3rem 0 0;font-size:1rem;font-weight:700;color:var(--brand-deep);line-height:1.35}
+
+/* ---------------- why grid ---------------- */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:clamp(2.5rem,5vw,3.5rem)}
+@media (max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.why-grid{grid-template-columns:1fr}}
+.why-card{
+  position:relative;padding:1.75rem 1.5rem;border-radius:var(--radius-lg);
+  background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--border-strong)}
+.why-num{
+  font-size:.74rem;font-weight:800;letter-spacing:.1em;color:var(--azure);
+  display:block;margin-bottom:.9rem;
+}
+.why-card h3{font-size:1.08rem;font-weight:800;color:var(--brand-deep);margin-bottom:.55rem;letter-spacing:-.01em}
+.why-card p{font-size:.92rem;color:var(--ink-soft);line-height:1.65}
+
+/* ---------------- steps ---------------- */
+.steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);
+  margin-top:clamp(2.5rem,5vw,3.5rem);counter-reset:s;
+}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:1.9rem 1.6rem;border-radius:var(--radius-lg);background:var(--tint);border:1px solid var(--border)}
+.step-n{
+  width:2.75rem;height:2.75rem;border-radius:50%;background:var(--brand);color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:.95rem;margin-bottom:1.1rem;
+  box-shadow:var(--shadow-brand);
+}
+.step h3{font-size:1.18rem;font-weight:800;color:var(--brand-deep);margin-bottom:.6rem}
+.step p{font-size:.94rem;color:var(--ink-soft);line-height:1.68}
+.step:not(:last-child)::after{
+  content:"";position:absolute;top:3.1rem;right:calc(var(--gap) * -.5 - .35rem);
+  width:.7rem;height:.7rem;border-top:2px solid var(--azure);border-right:2px solid var(--azure);
+  transform:rotate(45deg);
+}
+@media (max-width:820px){.step:not(:last-child)::after{display:none}}
+
+.note{
+  margin-top:clamp(1.75rem,3.5vw,2.5rem);padding:1.35rem 1.5rem;
+  background:#fff;border:1px solid var(--border);border-left:4px solid var(--azure);
+  border-radius:var(--radius);display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;
+  font-size:.98rem;font-weight:600;color:var(--brand-deep);box-shadow:var(--shadow-sm);
+}
+.note a{color:var(--brand);font-weight:800;border-bottom:2px solid var(--azure-light)}
+.note a:hover{border-bottom-color:var(--brand)}
+
+/* ---------------- services ---------------- */
+.svc{background:var(--offwhite);border-block:1px solid var(--border)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);margin-top:clamp(2.5rem,5vw,3.5rem)}
+@media (max-width:720px){.svc-grid{grid-template-columns:1fr}}
+.svc-card{
+  display:flex;gap:1.25rem;padding:1.75rem;border-radius:var(--radius-lg);
+  background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.svc-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.svc-ico{
+  width:3.15rem;height:3.15rem;flex:none;border-radius:.9rem;display:grid;place-items:center;
+  background:linear-gradient(145deg,var(--tint),var(--tint-2));color:var(--brand);border:1px solid var(--border);
+}
+.svc-ico svg{width:1.6rem;height:1.6rem}
+.svc-tag{font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--azure)}
+.svc-card h3{font-size:1.18rem;font-weight:800;color:var(--brand-deep);margin:.35rem 0 .6rem}
+.svc-card p{font-size:.93rem;color:var(--ink-soft);line-height:1.66}
+.svc-cta{
+  grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;
+  padding:1.75rem;border-radius:var(--radius-lg);
+  background:linear-gradient(135deg,var(--brand-deep),var(--brand));color:#fff;box-shadow:var(--shadow-brand);
+}
+.svc-cta div{flex:1 1 18rem}
+.svc-cta h3{font-size:1.25rem;color:#fff;margin-bottom:.35rem}
+.svc-cta p{color:rgba(255,255,255,.82);font-size:.95rem}
+
+/* ---------------- statement band ---------------- */
+.band{
+  position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(140deg,var(--brand-ink) 0%,var(--brand-deep) 48%,var(--brand) 100%);
+  padding-block:clamp(3.5rem,8vw,6.5rem);
+}
+.band::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(48rem 26rem at 88% 12%, rgba(127,178,220,.28), rgba(127,178,220,0) 70%);
+}
+.band .wrap{position:relative;z-index:1}
+.band-mark{
+  position:absolute;right:-2rem;top:50%;transform:translateY(-50%);
+  width:clamp(14rem,26vw,24rem);opacity:.10;pointer-events:none;z-index:0;
+}
+@media (max-width:820px){.band-mark{right:-5rem;opacity:.07}}
+.band .eyebrow{color:var(--azure-light)}
+.band .eyebrow::before{background:var(--azure)}
+.band h2{font-size:clamp(2rem,5.6vw,3.7rem);max-width:36rem}
+.band h2 em{font-style:normal;color:var(--azure-light)}
+.band p{margin-top:1.3rem;max-width:34rem;color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7}
+
+/* ---------------- pricing ---------------- */
+.price-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-top:.5rem}
+@media (max-width:900px){.price-grid{grid-template-columns:1fr}}
+.price-panel{
+  background:var(--tint);border:1px solid var(--border);border-radius:var(--radius-xl);
+  padding:clamp(1.6rem,3.5vw,2.4rem);
+}
+.price-panel h3{font-size:1.1rem;font-weight:800;color:var(--brand-deep);margin-bottom:1.35rem}
+.ask{display:grid;gap:.7rem}
+.ask li{
+  display:flex;gap:.9rem;align-items:flex-start;background:#fff;
+  border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem;
+}
+.ask .tick{
+  width:1.5rem;height:1.5rem;border-radius:50%;flex:none;background:var(--brand);color:#fff;
+  display:grid;place-items:center;margin-top:.1rem;
+}
+.ask .tick svg{width:.8rem;height:.8rem}
+.ask b{display:block;font-size:.95rem;font-weight:700;color:var(--brand-deep)}
+.ask span{font-size:.86rem;color:var(--ink-soft)}
+.disclaimer{
+  margin-top:1.35rem;font-size:.82rem;color:var(--ink-faint);font-weight:600;line-height:1.6;
+  padding-left:.9rem;border-left:2px solid var(--border-strong);
+}
+
+/* ---------------- trust ---------------- */
+.trust{background:var(--offwhite);border-block:1px solid var(--border)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);margin-top:clamp(2.5rem,5vw,3.5rem)}
+@media (max-width:760px){.stats{grid-template-columns:1fr}}
+.stat{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);
+  padding:1.9rem 1.6rem;box-shadow:var(--shadow-sm);
+}
+.stat b{display:block;font-size:clamp(2rem,4.4vw,2.9rem);font-weight:800;color:var(--brand);letter-spacing:-.03em;line-height:1}
+.stat p{margin-top:.7rem;font-size:.9rem;color:var(--ink-soft);line-height:1.6}
+
+/* ---------------- FAQ ---------------- */
+.faq{max-width:52rem;margin-top:clamp(2.25rem,4.5vw,3rem)}
+.faq details{
+  border:1px solid var(--border);border-radius:var(--radius);background:#fff;
+  margin-bottom:.7rem;overflow:hidden;transition:border-color .2s,box-shadow .2s;
+}
+.faq details[open]{border-color:var(--border-strong);box-shadow:var(--shadow)}
+.faq summary{
+  cursor:pointer;list-style:none;display:flex;align-items:center;gap:1rem;
+  padding:1.15rem 1.35rem;font-size:1.02rem;font-weight:700;color:var(--brand-deep);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";margin-left:auto;flex:none;width:.6rem;height:.6rem;
+  border-right:2px solid var(--brand-soft);border-bottom:2px solid var(--brand-soft);
+  transform:rotate(45deg);transition:transform .22s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq summary:hover{background:var(--tint)}
+.faq .ans{padding:0 1.35rem 1.35rem;font-size:.96rem;color:var(--ink-soft);line-height:1.72;max-width:44rem}
+
+/* ---------------- location ---------------- */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4vw,3rem);align-items:stretch;margin-top:clamp(2.25rem,4.5vw,3rem)}
+@media (max-width:860px){.loc-grid{grid-template-columns:1fr}}
+.loc-card{
+  background:#fff;border:1px solid var(--border);border-radius:var(--radius-xl);
+  padding:clamp(1.6rem,3.5vw,2.3rem);box-shadow:var(--shadow);
+}
+.loc-card h3{font-size:1.12rem;color:var(--brand-deep);margin-bottom:1.5rem}
+.loc-list{display:grid;gap:1.15rem}
+.loc-list>div{display:flex;gap:1rem}
+.loc-ico{width:2.35rem;height:2.35rem;flex:none;border-radius:.7rem;background:var(--tint);color:var(--brand);display:grid;place-items:center}
+.loc-ico svg{width:1.15rem;height:1.15rem}
+.loc-list dt{font-size:.68rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.loc-list dd{margin:.2rem 0 0;font-size:.98rem;font-weight:700;color:var(--brand-deep);line-height:1.45}
+.loc-list dd small{display:block;font-size:.82rem;font-weight:600;color:var(--ink-faint);margin-top:.15rem}
+.loc-list dd a:hover{color:var(--brand)}
+
+.map-card{
+  position:relative;overflow:hidden;border-radius:var(--radius-xl);
+  border:1px solid var(--border);min-height:22rem;
+  background:
+    linear-gradient(transparent 0 calc(100% - 1px), var(--border) calc(100% - 1px)) 0 0/100% 3.1rem,
+    linear-gradient(90deg, transparent 0 calc(100% - 1px), var(--border) calc(100% - 1px)) 0 0/3.1rem 100%,
+    linear-gradient(160deg,#fff,var(--tint));
+  display:grid;place-items:center;padding:2rem;text-align:center;
+}
+.map-card::before{
+  content:"";position:absolute;left:-12%;top:38%;width:124%;height:3.2rem;
+  background:linear-gradient(90deg,var(--tint-2),var(--azure-light),var(--tint-2));
+  transform:rotate(-7deg);opacity:.55;
+}
+.map-card::after{
+  content:"";position:absolute;left:22%;top:-15%;width:2.4rem;height:130%;
+  background:var(--tint-2);transform:rotate(11deg);opacity:.8;
+}
+.pin{position:relative;z-index:2}
+.pin-dot{
+  width:3.6rem;height:3.6rem;margin:0 auto .9rem;border-radius:50%;
+  background:var(--brand);color:#fff;display:grid;place-items:center;
+  box-shadow:0 0 0 .55rem rgba(49,91,137,.14),var(--shadow-brand);
+}
+.pin-dot svg{width:1.6rem;height:1.6rem}
+.pin b{display:block;font-size:1.02rem;font-weight:800;color:var(--brand-deep)}
+.pin span{font-size:.88rem;color:var(--ink-soft);font-weight:600}
+
+/* ---------------- contact ---------------- */
+.contact{background:linear-gradient(150deg,var(--brand-ink),var(--brand-deep) 60%,var(--brand));color:#fff;position:relative;overflow:hidden}
+.contact::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(40rem 24rem at 12% 108%, rgba(127,178,220,.26), rgba(127,178,220,0) 70%);
+}
+.contact .wrap{position:relative;z-index:1}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact .eyebrow{color:var(--azure-light)}
+.contact .eyebrow::before{background:var(--azure)}
+.contact h2{font-size:clamp(2rem,5.2vw,3.4rem)}
+.contact h2 em{font-style:normal;color:var(--azure-light)}
+.contact p{margin-top:1.2rem;color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7;max-width:32rem}
+.phone-card{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius-xl);padding:clamp(1.6rem,3.5vw,2.3rem);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.phone-card small{font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--azure-light)}
+.phone-card .num{display:block;font-size:clamp(1.7rem,4.4vw,2.35rem);font-weight:800;letter-spacing:-.02em;margin:.5rem 0 1.35rem}
+.phone-card .num:hover{color:var(--azure-light)}
+.phone-card dl{display:grid;gap:.85rem;padding-top:1.35rem;border-top:1px solid rgba(255,255,255,.16)}
+.phone-card dl>div{display:flex;justify-content:space-between;gap:1rem;font-size:.9rem}
+.phone-card dt{color:rgba(255,255,255,.6);font-weight:600}
+.phone-card dd{margin:0;font-weight:700;text-align:right}
+
+/* ---------------- footer ---------------- */
+.ftr{background:var(--brand-ink);color:rgba(255,255,255,.72);padding-block:clamp(3rem,6vw,4.5rem) 0}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr;gap:clamp(2rem,4vw,3.5rem)}
+@media (max-width:820px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ftr-grid{grid-template-columns:1fr}}
+.ftr .brand-mark{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);box-shadow:none}
+.ftr .brand-txt b{color:#fff}
+.ftr .brand-txt span{color:rgba(255,255,255,.5)}
+.ftr-about{margin-top:1.25rem;font-size:.92rem;line-height:1.7;max-width:24rem}
+.ftr h4{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.1rem}
+.ftr li+li{margin-top:.6rem}
+.ftr a:hover{color:#fff}
+.ftr-contact li{display:flex;gap:.65rem;align-items:flex-start;font-size:.92rem;line-height:1.55}
+.ftr-contact svg{width:1rem;height:1rem;color:var(--azure);flex:none;margin-top:.22rem}
+.ftr-nav li a{font-size:.92rem}
+.ftr-bot{
+  margin-top:clamp(2.5rem,5vw,3.5rem);padding-block:1.5rem;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;
+  font-size:.82rem;color:rgba(255,255,255,.45);
+}
+
+/* ---------------- mobile call bar ---------------- */
+.callbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  align-items:center;gap:.85rem;padding:.7rem .9rem;
+  background:rgba(255,255,255,.94);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid var(--border);box-shadow:0 -4px 20px rgba(19,42,64,.07);
+  padding-bottom:max(.7rem,env(safe-area-inset-bottom));
+}
+.callbar-info{min-width:0;flex:1}
+.callbar-info b{display:block;font-size:.82rem;font-weight:700;color:var(--brand-deep);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.callbar-info small{font-size:.72rem;color:var(--ink-faint);font-weight:600}
+.callbar .btn{padding:.72rem 1.2rem;font-size:.88rem}
+@media (max-width:700px){
+  .callbar{display:flex}
+  body{padding-bottom:4.6rem}
+}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:#fff;padding:.7rem 1rem;border-radius:.6rem;box-shadow:var(--shadow-lg);font-weight:700}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na sadržaj</a>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="Perfect Wash — početna">
+      <span class="brand-mark"><img src="assets/logo-mark.png" alt="Perfect Wash logo" width="120" height="120"></span>
+      <span class="brand-txt">
+        <b>PERFECT WASH</b>
+        <span>Vešeraj &amp; Perionica</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Glavna navigacija">
+      <a href="#usluge">Usluge</a>
+      <a href="#kako">Kako funkcioniše</a>
+      <a href="#cjenovnik">Cjenovnik</a>
+      <a href="#lokacija">Lokacija</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="tel:+38267515199">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>067 515 199</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Vešeraj i hemijska perionica · Zabjelo, Podgorica</span>
+      <h1 class="h-display">Donesi veš.<br>Ostalo je <em>na nama.</em></h1>
+      <p class="h-sub" style="max-width:33rem">Čist veš bez komplikacija. Peremo, sušimo, hemijski čistimo i obnavljamo obuću — šest dana u nedjelji, od 08 do 21h.</p>
+
+      <div class="chips" style="margin-top:1.6rem">
+        <span class="chip"><i></i>Pranje &amp; sušenje</span>
+        <span class="chip"><i></i>Hemijsko čišćenje</span>
+        <span class="chip"><i></i>Čišćenje obuće</span>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="tel:+38267515199">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Pozovi 067 515 199
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#kako">Kako funkcioniše</a>
+        <a class="btn btn-ghost btn-lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=42.4209027,19.2504929" target="_blank" rel="noopener">Kako do nas</a>
+      </div>
+
+      <dl class="hero-meta">
+        <div><dt>Radno vrijeme</dt><dd>Pon–Sub · 08–21h</dd></div>
+        <div><dt>Lokacija</dt><dd>Dušana Milutinovića 1</dd></div>
+        <div><dt>Radimo od</dt><dd>2017. godine</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-disc">
+        <span class="bubble b1"></span>
+        <span class="bubble b2"></span>
+        <span class="bubble b3"></span>
+        <span class="bubble b4"></span>
+        <img src="assets/logo.png" alt="Perfect Wash — vešeraj i hemijska perionica, Podgorica" width="400" height="400">
+      </div>
+      <div class="hero-badge">
+        <div><b>08–21h</b><small>Pon – Sub</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="flow reveal">
+      <div class="flow-step">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.4 10.2A2 2 0 0 1 16.6 21H7.4a2 2 0 0 1-2-1.8L4 9Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg>
+        <div><b>Prljav veš</b><small>Donesi kad ti odgovara</small></div>
+      </div>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <div class="flow-step">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="14" r="4.5"/><path d="M7 6.5h.01M11 6.5h.01"/></svg>
+        <div><b>Pranje</b><small>Profesionalne mašine</small></div>
+      </div>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <div class="flow-step">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><b>Čist i složen</b><small>Javimo kad je gotovo</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about">
+  <div class="wrap about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">Perfect Wash · Podgorica</span>
+      <h2 class="h-section">Pranje veša bez<br>gubljenja <span class="accent">vremena.</span></h2>
+      <p class="lede" style="margin-top:1.5rem">Perfect Wash je vešeraj i hemijska perionica na <strong>Zabjelu</strong>. Donesete veš, odijelo ili patike — mi ih operemo, očistimo i pripremimo za preuzimanje.</p>
+      <p class="lede">Radimo od ponedjeljka do subote, od 08:00 do 21:00, na adresi <strong>Dušana Milutinovića 1, Zabjelo, Podgorica</strong>. Bez aplikacija, bez čekanja na red — svrati ili nas pozovi.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#usluge">Vidi usluge</a>
+        <a class="btn btn-ghost" href="#cjenovnik">Treba ti cijena?</a>
+      </div>
+    </div>
+
+    <dl class="fact-grid reveal">
+      <div class="fact">
+        <span class="fact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+        <dt>Radno vrijeme</dt><dd>Pon–Sub<br>08:00 – 21:00</dd>
+      </div>
+      <div class="fact">
+        <span class="fact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <dt>Telefon</dt><dd><a href="tel:+38267515199">067 515 199</a></dd>
+      </div>
+      <div class="fact">
+        <span class="fact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <dt>Lokacija</dt><dd>Dušana Milutinovića 1<br>Zabjelo</dd>
+      </div>
+      <div class="fact">
+        <span class="fact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 15 8.5l7 1-5 4.9 1.2 7-6.2-3.4L5.8 21.4 7 14.4l-5-4.9 7-1L12 2Z"/></svg></span>
+        <dt>Iskustvo</dt><dd>Od 2017.<br>godine</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Zašto Perfect Wash</span>
+      <h2 class="h-section">Zašto <span class="accent">baš</span> mi?</h2>
+    </div>
+    <div class="why-grid">
+      <article class="why-card reveal"><span class="why-num">01</span><h3>Sve na jednom mjestu</h3><p>Vešeraj i hemijska perionica pod istim krovom. Ne moraš tražiti dvije adrese.</p></article>
+      <article class="why-card reveal"><span class="why-num">02</span><h3>Otvoreno šest dana</h3><p>Ponedjeljak–subota, 08:00 do 21:00. Stigneš i prije i poslije posla.</p></article>
+      <article class="why-card reveal"><span class="why-num">03</span><h3>Njega obuće</h3><p>Dubinsko čišćenje patika i cipela — ne samo veša.</p></article>
+      <article class="why-card reveal"><span class="why-num">04</span><h3>Zabjelo, Dušana Milutinovića 1</h3><p>Lako dostupna lokacija sa parkingom u naselju.</p></article>
+      <article class="why-card reveal"><span class="why-num">05</span><h3>Od 2017. godine</h3><p>Domaći tim koji ovaj posao radi već godinama u Podgorici.</p></article>
+      <article class="why-card reveal"><span class="why-num">06</span><h3>Profesionalna oprema</h3><p>Radimo na profesionalnim mašinama za pranje i hemijsko čišćenje.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="kako" style="background:var(--white);border-top:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Proces</span>
+      <h2 class="h-section">Kako <span class="accent">funkcioniše?</span></h2>
+      <p class="lede" style="margin-top:1.2rem">Tri koraka. Bez zakazivanja, bez papirologije.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step reveal">
+        <div class="step-n">01</div>
+        <h3>Donesi veš</h3>
+        <p>Svrati na Dušana Milutinovića 1 i ostavi veš, odjeću ili obuću. Reci nam šta ti treba.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step-n">02</div>
+        <h3>Mi radimo svoje</h3>
+        <p>Peremo, sušimo ili hemijski čistimo — zavisno od materijala i onoga što si tražio.</p>
+      </article>
+      <article class="step reveal">
+        <div class="step-n">03</div>
+        <h3>Preuzmi čisto</h3>
+        <p>Javimo ti kad je gotovo. Ti samo dođeš po svjež, uredno pripremljen veš.</p>
+      </article>
+    </div>
+
+    <p class="note reveal">
+      <span>Nijesi siguran kako se nešto čisti? Pozovi <a href="tel:+38267515199">067 515 199</a> i pitaj prije nego dođeš.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section svc" id="usluge">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Usluge</span>
+      <h2 class="h-section">Sve što tvom <span class="accent">vešu</span> treba.</h2>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc-card reveal">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="2.5" width="18" height="19" rx="3"/><circle cx="12" cy="14" r="4.6"/><path d="M9 14c1-1.2 2-1.2 3 0s2 1.2 3 0"/><path d="M6.5 6h.01M10 6h.01"/></svg></span>
+        <div>
+          <span class="svc-tag">Vešeraj</span>
+          <h3>Pranje veša</h3>
+          <p>Osnovna usluga vešeraja — pranje na profesionalnim mašinama. Donesi svoj veš i preuzmi ga čistog, suvog i složenog.</p>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5a2 2 0 1 1 2-2"/><path d="M12 6.5 3.4 13a1.4 1.4 0 0 0 .85 2.5h15.5a1.4 1.4 0 0 0 .85-2.5L12 6.5Z"/><path d="M6 19h12"/></svg></span>
+        <div>
+          <span class="svc-tag">Perionica</span>
+          <h3>Hemijsko čišćenje</h3>
+          <p>Za odijela, kapute, haljine i osjetljive materijale koji ne idu u običnu mašinu.</p>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17.5h19a0 0 0 0 1 0 0v1a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-1Z"/><path d="M2.5 17.5c0-3 .6-5.4 1.4-7.2.4-.9 1.6-1 2.2-.2l1.3 1.7c.5.6 1.4.7 2 .2l1.2-1c.6-.5 1.5-.4 2 .2l1 1.2c.5.6 1.3.7 1.9.3l1.6-1c1-.6 2.2 0 2.4 1.1.3 1.4.5 3 .5 4.7"/></svg></span>
+        <div>
+          <span class="svc-tag">Obuća</span>
+          <h3>Čišćenje obuće</h3>
+          <p>Detaljno i profesionalno čišćenje patika i cipela — da ponovo zasijaju.</p>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <span class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 18v-6.5A2.5 2.5 0 0 1 5 9h14a2.5 2.5 0 0 1 2.5 2.5V18"/><path d="M2.5 15h19"/><path d="M6.5 9V7a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v2"/><path d="M2.5 18v2M21.5 18v2"/></svg></span>
+        <div>
+          <span class="svc-tag">Krupni komadi</span>
+          <h3>Posteljina i tekstil</h3>
+          <p>Za veće komade nas pozovi prije dolaska da provjerimo termin i način obrade.</p>
+        </div>
+      </article>
+
+      <div class="svc-cta reveal">
+        <div>
+          <h3>Nešto specifično?</h3>
+          <p>Reci nam šta treba očistiti i javljamo ti da li i kako to radimo.</p>
+        </div>
+        <a class="btn btn-onDark" href="tel:+38267515199">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Pozovi nas
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT BAND ============ -->
+<section class="band">
+  <img class="band-mark" src="assets/logo-mark-white.png" alt="" width="600" height="600" loading="lazy">
+  <div class="wrap">
+    <span class="eyebrow">Perfect Wash</span>
+    <h2>Manje veša.<br><em>Više vremena</em> za život.</h2>
+    <p>Mašina, sušilica, peglanje, mrlje koje ne izlaze — to je naš posao. Tvoj je da subotu provedeš negdje drugdje.</p>
+    <div class="btn-row">
+      <a class="btn btn-onDark btn-lg" href="tel:+38267515199">Pozovi 067 515 199</a>
+      <a class="btn btn-outlineDark btn-lg" href="#lokacija">Gdje se nalazimo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="cjenovnik">
+  <div class="wrap">
+    <div class="price-grid">
+      <div class="reveal">
+        <span class="eyebrow">Cjenovnik</span>
+        <h2 class="h-section">Treba ti <span class="accent">cijena?</span></h2>
+        <p class="lede" style="margin-top:1.4rem">Cijena zavisi od količine, materijala i vrste usluge, pa je ne objavljujemo unaprijed. Javi nam šta treba oprati ili očistiti i brzo dobijaš tačnu informaciju.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="tel:+38267515199">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Pozovi nas
+          </a>
+          <a class="btn btn-ghost btn-lg" href="mailto:perfectwashcg@hotmail.com?subject=Upit%20za%20cijenu%20%E2%80%94%20Perfect%20Wash">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6 9-6"/></svg>
+            Pošalji poruku
+          </a>
+        </div>
+        <p class="disclaimer">Napomena: cjenovnik nije javno objavljen, pa ovdje namjerno ne navodimo iznose.</p>
+      </div>
+
+      <div class="price-panel reveal">
+        <h3>Šta nam reci kad zoveš</h3>
+        <ul class="ask">
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Vrsta usluge</b><span>Pranje veša, hemijsko čišćenje ili čišćenje obuće</span></div>
+          </li>
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Šta se čisti</b><span>Npr. odijelo, kaput, posteljina, patike</span></div>
+          </li>
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Količina</b><span>Broj komada ili približna težina veša</span></div>
+          </li>
+          <li>
+            <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><b>Kad ti treba</b><span>Da provjerimo termin za taj dan</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section class="section trust">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Povjerenje</span>
+      <h2 class="h-section">Lokalni vešeraj koji<br><span class="accent">radi svoj posao.</span></h2>
+      <p class="lede" style="margin-top:1.3rem">Ne prikazujemo izmišljene recenzije. Najnovije objave, fotografije i utiske korisnika možeš pogledati na našoj zvaničnoj Facebook stranici.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><b>2017.</b><p>Godina od koje Perfect Wash posluje u Podgorici</p></div>
+      <div class="stat reveal"><b>350+</b><p>Pratilaca na zvaničnoj Facebook stranici</p></div>
+      <div class="stat reveal"><b>6 dana</b><p>Radimo od ponedjeljka do subote, 08–21h</p></div>
+    </div>
+
+    <div class="btn-row reveal">
+      <a class="btn btn-primary" href="https://www.facebook.com/PerionicaVesaCg/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.12-2.45-.12-2.45 0-4.1 1.5-4.1 4.24V9.9H7.4V13h2.25v8h3.85Z"/></svg>
+        Pogledaj Facebook stranicu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h-section">Česta <span class="accent">pitanja.</span></h2>
+    </div>
+
+    <div class="faq reveal">
+      <details open>
+        <summary>Gdje se nalazite?</summary>
+        <p class="ans">Na adresi Dušana Milutinovića 1, Zabjelo, Podgorica. Klikom na „Otvori u Google Maps“ dobijaš navigaciju do nas.</p>
+      </details>
+      <details>
+        <summary>Koje usluge nudite?</summary>
+        <p class="ans">Pranje veša, hemijsko čišćenje odjeće i profesionalno čišćenje obuće.</p>
+      </details>
+      <details>
+        <summary>Koliko traje usluga?</summary>
+        <p class="ans">Zavisi od vrste usluge i trenutne gužve. Rok ti kažemo odmah pri prijemu ili telefonom prije dolaska.</p>
+      </details>
+      <details>
+        <summary>Koje je radno vrijeme?</summary>
+        <p class="ans">Radimo od ponedjeljka do subote, od 08:00 do 21:00. Nedjeljom ne radimo.</p>
+      </details>
+      <details>
+        <summary>Da li je potrebno zakazivanje?</summary>
+        <p class="ans">Možeš jednostavno svratiti u toku radnog vremena. Ako ti nešto treba za određeni dan, najbolje je da nas prvo pozoveš na 067 515 199.</p>
+      </details>
+      <details>
+        <summary>Koliko košta?</summary>
+        <p class="ans">Cijena zavisi od količine i vrste materijala. Pozovi nas i odmah dobijaš informaciju za tvoj konkretan slučaj.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="section" id="lokacija" style="background:var(--offwhite);border-block:1px solid var(--border)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Lokacija</span>
+      <h2 class="h-section">Nađi nas <span class="accent">u Podgorici.</span></h2>
+    </div>
+
+    <div class="loc-grid">
+      <div class="loc-card reveal">
+        <h3>Perfect Wash — Vešeraj &amp; Hemijska perionica</h3>
+        <dl class="loc-list">
+          <div>
+            <span class="loc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><dt>Adresa</dt><dd>Dušana Milutinovića 1, Zabjelo, Podgorica<small>81101, Crna Gora</small></dd></div>
+          </div>
+          <div>
+            <span class="loc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><dt>Telefon</dt><dd><a href="tel:+38267515199">067 515 199</a></dd></div>
+          </div>
+          <div>
+            <span class="loc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+            <div><dt>Radno vrijeme</dt><dd>Ponedjeljak–subota · 08:00–21:00<small>Nedjeljom ne radimo</small></dd></div>
+          </div>
+          <div>
+            <span class="loc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6 9-6"/></svg></span>
+            <div><dt>E-mail</dt><dd><a href="mailto:perfectwashcg@hotmail.com">perfectwashcg@hotmail.com</a></dd></div>
+          </div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=42.4209027,19.2504929" target="_blank" rel="noopener">Otvori u Google Maps</a>
+          <a class="btn btn-ghost" href="tel:+38267515199">Pozovi</a>
+        </div>
+      </div>
+
+      <a class="map-card reveal" href="https://www.google.com/maps/dir/?api=1&amp;destination=42.4209027,19.2504929" target="_blank" rel="noopener" aria-label="Otvori lokaciju u Google Maps">
+        <span class="pin">
+          <span class="pin-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <b>Dušana Milutinovića 1</b>
+          <span>Zabjelo, Podgorica · otvori navigaciju</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Kontakt</span>
+      <h2>Veš čeka.<br><em>Mi smo tu.</em></h2>
+      <p>Svrati tokom radnog vremena ili nas prvo pozovi — reci šta ti treba i dogovorićemo se u par minuta.</p>
+      <div class="btn-row">
+        <a class="btn btn-onDark btn-lg" href="tel:+38267515199">Pozovi nas</a>
+        <a class="btn btn-outlineDark btn-lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=42.4209027,19.2504929" target="_blank" rel="noopener">Kako do nas</a>
+      </div>
+    </div>
+
+    <div class="phone-card">
+      <small>Perfect Wash · Podgorica</small>
+      <a class="num" href="tel:+38267515199">067 515 199</a>
+      <dl>
+        <div><dt>Adresa</dt><dd>Dušana Milutinovića 1<br>Zabjelo, Podgorica</dd></div>
+        <div><dt>Radno vrijeme</dt><dd>Pon–Sub · 08:00–21:00</dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:perfectwashcg@hotmail.com">perfectwashcg@hotmail.com</a></dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/PerionicaVesaCg/" target="_blank" rel="noopener">Perfect Wash</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-mark"><img src="assets/logo-mark-white.png" alt="" width="120" height="120"></span>
+          <span class="brand-txt"><b>PERFECT WASH</b><span>Vešeraj &amp; Perionica</span></span>
+        </div>
+        <p class="ftr-about">Vešeraj i hemijska perionica na Zabjelu, Podgorica. Pranje veša, hemijsko čišćenje odjeće i profesionalno čišćenje obuće — od 2017. godine.</p>
+      </div>
+
+      <nav aria-label="Footer navigacija">
+        <h4>Stranica</h4>
+        <ul class="ftr-nav">
+          <li><a href="#usluge">Usluge</a></li>
+          <li><a href="#kako">Kako funkcioniše</a></li>
+          <li><a href="#cjenovnik">Cjenovnik</a></li>
+          <li><a href="#lokacija">Lokacija</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Kontakt</h4>
+        <ul class="ftr-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Dušana Milutinovića 1, Zabjelo, Podgorica</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+38267515199">067 515 199</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6 9-6"/></svg><a href="mailto:perfectwashcg@hotmail.com">perfectwashcg@hotmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span>Pon–Sub · 08:00–21:00</span></li>
+          <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.12-2.45-.12-2.45 0-4.1 1.5-4.1 4.24V9.9H7.4V13h2.25v8h3.85Z"/></svg><a href="https://www.facebook.com/PerionicaVesaCg/" target="_blank" rel="noopener">Facebook stranica</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ftr-bot">
+      <span>© <span id="yr">2026</span> PERFECT WASH · Podgorica, Crna Gora</span>
+      <span>Vešeraj · Hemijsko čišćenje · Čišćenje obuće</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MOBILE CALL BAR ============ -->
+<div class="callbar">
+  <div class="callbar-info">
+    <b>Dušana Milutinovića 1, Zabjelo</b>
+    <small>Pon–Sub · 08–21h</small>
+  </div>
+  <a class="btn btn-primary" href="tel:+38267515199">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Pozovi
+  </a>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"DryCleaningOrLaundry","name":"Perfect Wash — Vešeraj & Hemijska perionica","alternateName":"PERFECT WASH","description":"Perfect Wash, Dušana Milutinovića 1, Zabjelo — pranje veša, hemijsko čišćenje i čišćenje obuće u Podgorici. Pon–Sub 08–21h. Pozovi 067 515 199.","telephone":"+382 67 515 199","email":"perfectwashcg@hotmail.com","foundingDate":"2017","image":"assets/logo-circle.png","logo":"assets/logo-circle.png","address":{"@type":"PostalAddress","streetAddress":"Dušana Milutinovića 1","addressLocality":"Podgorica","postalCode":"81101","addressCountry":"ME"},"geo":{"@type":"GeoCoordinates","latitude":42.4209027,"longitude":19.2504929},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"21:00"}],"areaServed":"Podgorica","sameAs":["https://www.facebook.com/PerionicaVesaCg/"],"hasMap":"https://www.google.com/maps/dir/?api=1&destination=42.4209027,19.2504929","hasOfferCatalog":{"@type":"OfferCatalog","name":"Usluge","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pranje veša"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Hemijsko čišćenje"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Čišćenje obuće"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Posteljina i tekstil"}}]}}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Gdje se nalazite?","acceptedAnswer":{"@type":"Answer","text":"Na adresi Dušana Milutinovića 1, Zabjelo, Podgorica. Klikom na „Otvori u Google Maps“ dobijaš navigaciju do nas."}},
+{"@type":"Question","name":"Koje usluge nudite?","acceptedAnswer":{"@type":"Answer","text":"Pranje veša, hemijsko čišćenje odjeće i profesionalno čišćenje obuće."}},
+{"@type":"Question","name":"Koliko traje usluga?","acceptedAnswer":{"@type":"Answer","text":"Zavisi od vrste usluge i trenutne gužve. Rok ti kažemo odmah pri prijemu ili telefonom prije dolaska."}},
+{"@type":"Question","name":"Koje je radno vrijeme?","acceptedAnswer":{"@type":"Answer","text":"Radimo od ponedjeljka do subote, od 08:00 do 21:00. Nedjeljom ne radimo."}},
+{"@type":"Question","name":"Da li je potrebno zakazivanje?","acceptedAnswer":{"@type":"Answer","text":"Možeš jednostavno svratiti u toku radnog vremena. Ako ti nešto treba za određeni dan, najbolje je da nas prvo pozoveš na 067 515 199."}},
+{"@type":"Question","name":"Koliko košta?","acceptedAnswer":{"@type":"Answer","text":"Cijena zavisi od količine i vrste materijala. Pozovi nas i odmah dobijaš informaciju za tvoj konkretan slučaj."}}]}
+</script>
+
+<script>
+/* sticky header shadow */
+(function(){
+  var hdr = document.getElementById('hdr');
+  var onScroll = function(){ hdr.classList.toggle('is-stuck', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+
+/* reveal on scroll */
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+  els.forEach(function(el, i){ el.style.transitionDelay = (Math.min(i % 6, 5) * 55) + 'ms'; io.observe(el); });
+})();
+
+/* current year */
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
