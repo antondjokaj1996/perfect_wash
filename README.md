@@ -1,6 +1,6 @@
 # Perfect Wash — informativna stranica
 
-Statična jednostrana prezentacija za **Perfect Wash** (vešeraj i hemijska perionica,
+Statična jednostrana prezentacija za **Perfect Wash** (vešeraj i hemijska čistiona,
 Dušana Milutinovića 1, Zabjelo, Podgorica). Rekreirano po uzoru na
 `perfect-wash-demo.lovable.app`, sa dodatim logotipom firme i paletom izvedenom
 iz logotipa (brand plava `#315B89`).
