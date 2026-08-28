@@ -62,12 +62,53 @@ Folder je statičan — dovoljno je uploadovati `index.html`, `robots.txt` i `as
 - **GitHub Pages** — commit u repo, Settings → Pages → branch root.
 - **Klasični shared hosting** — FTP u `public_html/`.
 
+## Domen: Namecheap → GitHub Pages
+
+Hosting ostaje GitHub Pages (besplatno, custom domen i SSL uključeni). Plaća se samo domen.
+
+### 1. GitHub
+Repo → **Settings** → **Pages** → **Custom domain** → `perfectwash.me` → Save.
+GitHub tada commituje `CNAME` fajl u repo. Fajl je već u ovom folderu — **ne brisati ga**,
+jer bez njega custom domen prestaje da radi pri sljedećem uploadu.
+
+### 2. Namecheap DNS
+Domain List → Manage → **Advanced DNS**.
+
+Prvo obrisati default parking zapise:
+- `URL Redirect Record` za `@`
+- `CNAME` `www` → `parkingpage.namecheap.com`
+
+Pa dodati:
+
+| Type | Host | Value |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| AAAA | @ | 2606:50c0:8000::153 |
+| AAAA | @ | 2606:50c0:8001::153 |
+| AAAA | @ | 2606:50c0:8002::153 |
+| AAAA | @ | 2606:50c0:8003::153 |
+| CNAME | www | antondjokaj1996.github.io. |
+
+AAAA zapisi su opcioni (IPv6), ali se preporučuju.
+Ne koristiti Namecheap "URL Redirect" za apex — mora A zapis.
+
+### 3. HTTPS
+Kad GitHub završi DNS provjeru, u Settings → Pages uključiti **Enforce HTTPS**.
+Certifikat (Let's Encrypt) obično dođe za nekoliko minuta, GitHub navodi do 24h.
+
+### Napomene
+- Putanje u `index.html` su relativne, pa rade i na `/perfect_wash/` i na root domenu —
+  ništa se ne mijenja pri prelasku.
+- Stari `antondjokaj1996.github.io/perfect_wash/` se nakon toga sam 301-redirectuje na domen.
+
 ### Prije puštanja u produkciju
 
-1. `index.html` — zamijeniti `<link rel="canonical" href="https://perfectwash.me/">`
-   pravim domenom.
-2. `og:image` / `twitter:image` — zamijeniti relativnu putanju punim URL-om
-   (`https://domen.me/assets/logo-circle.png`); dio social crawlera ne rješava
-   relativne putanje.
+1. ~~`canonical`~~ — postavljen na `https://perfectwash.me/`.
+2. ~~`og:image` / `twitter:image`~~ — apsolutni URL-ovi postavljeni.
 3. Provjeriti koordinate u JSON-LD-u (`42.4209027, 19.2504929`) i Google Maps linkovima.
 4. Opciono: `assets/logo-original.jpg` se može izbrisati — nije referenciran.
+5. Ako domen NIJE `perfectwash.me`: zamijeniti ga u `CNAME` fajlu i na 5 mjesta u
+   `index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`, JSON-LD `image`/`logo`/`url`).
